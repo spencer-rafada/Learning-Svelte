@@ -1,6 +1,6 @@
 <script>
-	import Nested from "./Nested.svelte";
-	import Info from './Info.svelte';
+	import Nested from "./Conditionals/Nested.svelte";
+	import Info from './Conditionals/Info.svelte';
 	import Conditionals from "./Conditionals.svelte";
 
 	const pkg = {
