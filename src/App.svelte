@@ -1,20 +1,8 @@
 <script>
-	import Nested from "./Conditionals/Nested.svelte";
-	import Info from './Conditionals/Info.svelte';
-	import Conditionals from "./Conditionals.svelte";
-
-	const pkg = {
-		name: 'svelte',
-		version: 3,
-		speed: 'blazing',
-		website: 'https://svelte.dev'
-	};
+  import ComponentEvents from "./ComponentEvents.svelte";
+  function handleMessage(event) {
+    alert(event.detail.text);
+  }
 </script>
 
-<Nested answer={42}/>
-<Nested />
-
-<Info name={pkg.name} version={pkg.version} speed={pkg.speed} website={pkg.website}/>
-<Info {...pkg} />
-
-<Conditionals />
+<ComponentEvents on:message={handleMessage} />
